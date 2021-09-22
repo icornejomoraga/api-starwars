@@ -95,11 +95,11 @@ def vehicles():
         
     else:
         vehicles = Vehicles()
-        vehicles.name = request.json.get('name')
-        vehicles.model = request.json.get('model')
-        vehicles.passengers = request.json.get('passengers')
-        vehicles.manufacturer = request.json.get('manufacturer')
-        vehicles.cost_in_credits = request.json.get('cost_in_credits')     
+        vehicles.name = request.json.get("name")
+        vehicles.model = request.json.get("model")
+        vehicles.passengers = request.json.get("passengers")
+        vehicles.manufacturer = request.json.get("manufacturer")
+        vehicles.cost_in_credits = request.json.get("cost_in_credits")     
         
         db.session.add(vehicles)
         db.session.commit()
@@ -122,6 +122,7 @@ def starships():
         starships.max_atmosphering_speed = request.json.get("max_atmosphering_speed")
                 
             
+        
         db.session.add(starships)
         db.session.commit()
     
